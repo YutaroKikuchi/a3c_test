@@ -289,12 +289,12 @@ class Worker():
                 if self.name == 'worker_0':
                     sess.run(self.increment)
                 episode_count += 1
-                print(self.name)
-                print("epsode_count=",episode_count)
+                #print(self.name)
+                #print("epsode_count=",episode_count)
                 if episode_count > max_episode_length:
                     coord.request_stop()
 
-max_episode_length = 20
+max_episode_length = 300
 gamma = .99 # discount rate for advantage estimation and reward discounting
 s_size = 7056 # Observations are greyscale frames of 84 * 84 * 1
 a_size = 3 # Agent can move Left, Right, or Fire
